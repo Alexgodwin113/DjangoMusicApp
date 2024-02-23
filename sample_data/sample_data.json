@@ -1,0 +1,203 @@
+{
+  "albums": [
+    {
+      "cover": "dripping-stereo.png",
+      "title": "Dripping Stereo (Deluxe Edition)",
+      "description": "A very unique album from JRocs!",
+      "artist": "Jonathan Rocs",
+      "price": 5,
+      "format": "Vinyl",
+      "release_date": "2023-06-06",
+      "comments": [
+        {
+          "user__display_name": "AnnaB93",
+          "message": "Not a fan to be honest"
+        },
+        {
+          "user__display_name": "AnnaB93",
+          "message": "Actually, it's pretty good"
+        },
+        {
+          "user__display_name": "jc2",
+          "message": "Best album yet!!!!"
+        }
+      ]
+    },
+    {
+      "cover": "music-for-cats.png",
+      "title": "Music for Cats",
+      "description": "Your cats will enjoy",
+      "artist": "MyCatMusicCo",
+      "price": 35,
+      "format": "Digital download",
+      "release_date": "2023-06-06",
+      "comments": [
+        {
+          "user__display_name": "jonManco",
+          "message": "My cats and I love it"
+        },
+        {
+          "user__display_name": "AnnaB93",
+          "message": "Is this for cats or humans?? Kind of liking it"
+        },
+        {
+          "user__display_name": "jc2",
+          "message": "Far too expensive :-("
+        }
+      ]
+    },
+    {
+      "cover": "my-red-house.png",
+      "title": "My Red House",
+      "description": "The soulful audio experience from Agnes Merrello",
+      "artist": "Agnes Merrello",
+      "price": 3,
+      "format": "CD",
+      "release_date": "2023-06-06",
+      "comments": [
+        {
+          "user__display_name": "jonManco",
+          "message": "CD isn't worth it, go for vinyl one"
+        },
+        {
+          "user__display_name": "jc2",
+          "message": "Arrived scratched :'-("
+        }
+      ]
+    },
+    {
+      "cover": "my-red-house.png",
+      "title": "My Red House",
+      "description": "The soulful audio experience from Agnes Merrello, now on Vinyl!",
+      "artist": "Agnes Merrello",
+      "price": 12,
+      "format": "Vinyl",
+      "release_date": "2023-06-06",
+      "comments": [
+        {
+          "user__display_name": "jonManco",
+          "message": "Vinyl is the best version!"
+        }
+      ]
+    },
+    {
+      "cover": "our-technicolour-world.png",
+      "title": "OUR TECHNICOLOUR (world)",
+      "description": "",
+      "artist": "pippumpkin",
+      "price": 1.99,
+      "format": "Digital download",
+      "release_date": "2023-06-06",
+      "comments": [
+        {
+          "user": "someguy",
+          "message": "first"
+        }
+      ]
+    },
+    {
+      "cover": "sealife.png",
+      "title": "sealife part II reprise EP",
+      "description": "",
+      "artist": "Tom Turle and Friends",
+      "price": 0,
+      "format": "Digital download",
+      "release_date": "2023-06-06",
+      "comments": [
+        {
+          "user": "",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "cover": null,
+      "title": "Biggest Hits Compilation",
+      "description": "",
+      "artist": "Songster",
+      "price": 1.99,
+      "format": "Digital download",
+      "release_date": "2023-06-06",
+      "comments": [
+        {
+          "user": "",
+          "message": ""
+        }
+      ]
+    }
+  ],
+  "songs": [
+    {
+      "title": "its too loud",
+      "runtime": 294,
+      "albums": [
+        "Dripping Stereo (Deluxe Edition)"
+      ]
+    },
+    {
+      "title": "oh actually its fine",
+      "runtime": 231,
+      "albums": [
+        "Dripping Stereo (Deluxe Edition)"
+      ]
+    },
+    {
+      "title": "nope too loud",
+      "runtime": 127,
+      "albums": [
+        "Dripping Stereo (Deluxe Edition)"
+      ]
+    },
+    {
+      "title": "Running without a care at 4am",
+      "runtime": 1000,
+      "albums": [
+        "Music for Cats"
+      ]
+    },
+    {
+      "title": "Snoozing all day",
+      "runtime": 1505,
+      "albums": [
+        "Music for Cats"
+      ]
+    },
+    {
+      "title": "My bowl is empty (again) (sad version)",
+      "runtime": 340,
+      "albums": [
+        "Music for Cats"
+      ]
+    },
+    {
+      "title": "The dog is back",
+      "runtime": 134,
+      "albums": [
+        "Music for Cats"
+      ]
+    },
+    {
+      "title": "BRICKS ARE FALLING",
+      "runtime": 180,
+      "albums": [
+        "My Red House"
+      ]
+    },
+    {
+      "title": "THE HEARTH AND HOME",
+      "runtime": 182,
+      "albums": [
+        "My Red House",
+        "Biggest Hits Compilation"
+      ]
+    },
+    {
+      "title": "LEAKY ROOF",
+      "runtime": 189,
+      "albums": [
+        "My Red House",
+        "Biggest Hits Compilation"
+      ]
+    }
+  ]
+}

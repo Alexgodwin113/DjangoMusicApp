@@ -1,0 +1,26 @@
+msgid "Home"
+msgstr "Home"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "About"
+msgstr "About"
+
+msgid "Account"
+msgstr "Account"
+
+msgid "Account Details"
+msgstr "Account Details"
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Signup"
+msgstr "Signup"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Albums"
+msgstr "Albums"

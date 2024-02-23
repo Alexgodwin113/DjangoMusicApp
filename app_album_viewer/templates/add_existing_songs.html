@@ -1,0 +1,17 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+  <h2>Add Existing Songs to {{ album.title }}</h2>
+  <form method="post" action="{% url 'add-existing-songs' album.id %}">
+    {% csrf_token %}
+    <label>Select Songs to Add:</label>
+    <select name="selected_songs" multiple>
+      {% for song in existing_songs %}
+        <option value="{{ song.id }}">{{ song.title }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Add Selected Songs</button>
+  </form>
+  <a href="{% url 'album-detail' album.id %}">Cancel</a>
+{% endblock content %}

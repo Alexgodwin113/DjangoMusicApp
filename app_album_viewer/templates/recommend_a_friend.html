@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="recom-title">
+    Recommend a Friend
+</div>
+
+{% if success_message %}
+    <p class="success-message">{{ success_message }}</p>
+{% endif %}
+
+{% if error_message %}
+    <p class="error-message">{{ error_message }}</p>
+{% endif %}
+
+<form method="post" action="{% url 'send-recommendation' %}" class="recommendation-form">
+    {% csrf_token %}
+    <input type="hidden" name="album_id" value="{{ album.id }}">
+
+    <label for="friend_email">Friend's Email:</label>
+    <input type="email" name="friend_email" required>
+
+    <label for="email_subject">Email Subject:</label>
+    <input type="text" name="email_subject" value="Check out this album: {{ album.title }}" required>
+
+    <label for="email_message">Email Message:</label>
+    <textarea name="email_message" rows="4" cols="50">I recommend you to check out this album: {{ album.title }}</textarea>
+
+    <button type="submit" class="send-recommendation-button">Send Recommendation</button>
+</form>
+
+{% endblock content %}

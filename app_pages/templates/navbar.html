@@ -1,0 +1,21 @@
+<ul class="menu">
+    <span class="leftmenu">
+    <li> <a href="{% url 'home' %}">Home </a> </li>
+    <li> <a href="{% url 'contact' %}">Contact</a> </li>
+    <li> <a href="{% url 'about' %}">About</a> </li>
+    
+    </span>
+    <span class="rightmenu">
+        {% if user.is_authenticated %}
+        <li> <a href="{% url 'logout' %}">Logout</a> </li>
+        <li><a href="{% url 'account-management' %}">Account</a></li>
+        <li> <a href="{% url 'albums' %}">Albums</a> </li>
+        
+        {% else %}
+        <li> <a href="{% url 'albums' %}">Albums</a> </li>
+        <li> <a href="{% url 'signup_user' %}">Signup</a> </li>
+        <li> <a href="{% url 'login' %}">Login</a> </li>
+        {% endif%}
+
+    </span>
+   </ul> 

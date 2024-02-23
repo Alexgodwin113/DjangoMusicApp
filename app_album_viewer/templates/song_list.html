@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="songs-list-view">
+<h3 class="songs-heading">Songs</h3>
+
+{% for song in songs_list %}
+    <div class="song-container">
+        <p class="song-title">{{ song.title }}</p>
+        <p class="song-runtime">Runtime: {{ song.runtime }} seconds</p>
+        <input type="button" onclick="location.href='{% url 'song_delete' pk=album.id song_pk=song.id %}';" value="Remove Song" class="remove-song-button" />
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}

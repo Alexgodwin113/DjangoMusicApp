@@ -1,0 +1,29 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Account Management - Music App</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="account-management">
+        <h1 class="welcome-message">Welcome, {{ user.username }}!</h1>
+
+        <h2 class="comments-heading">Your Comments:</h2>
+        {% if comments %}
+            <ul class="comment-list">
+                {% for comment in comments %}
+                    <li class="comment-item">{{ comment.album.title }}: {{ comment.message }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="no-comments">You haven't left any comments yet.</p>
+        {% endif %}
+
+        <form method="post" action="{% url 'logout' %}" class="logout-form">
+            {% csrf_token %}
+            <button type="submit" class="logout-button">Logout</button>
+        </form>
+    </div>
+{% endblock content %}

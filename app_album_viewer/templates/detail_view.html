@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+  <h2 class="album-title">{{ album.title }}</h2>
+  <hr class="divider">
+
+  <p class="album-description">{{ album.description }}</p>
+  <p class="album-artist">Artist: {{ album.artist }}</p>
+  <p class="album-price">Price: £{{ album.price }}</p>
+  <p class="album-format">Format: {{ album.get_format_display }}</p>
+  <p class="album-release-date">Release Date: {{ album.release_date }}</p>
+  <p class="created-at">Created: {{ album.created_at }}</p>
+  <p class="updated-at">Last Updated: {{ album.updated_at }}</p>
+
+  <hr class="divider">
+
+  <input type="button" class="edit-btn" onclick="location.href='{% url 'album-update' pk=album.id %}';" value="Edit" /> 
+  <input type="button" class="delete-btn" onclick="location.href='{% url 'album-delete' pk=album.id %}';" value="Delete" /> 
+  <input type="button" class="view-songs-btn" onclick="location.href='{% url 'songs_list' pk=album.id %}';" value="View Songs" /> 
+  <input type="button" class="add-songs-btn" onclick="location.href='{% url 'add-song' pk=album.id %}';" value="Add Songs" /> 
+  <input type="button" class="add-existing-songs-btn" onclick="location.href='{% url 'add-existing-songs' album.id %}';" value="Add Existing Songs" />
+  <input type="button" class="view-comments-btn" onclick="location.href='{% url 'album-comments' pk=album.id %}';" value="View Comments" /> 
+  <a href="{% url 'recommend-a-friend' album.id %}" class="btn btn-primary recommend-btn">Recommend a Friend</a>
+
+  
+ 
+
+  <form method="post" action="{% url 'add-comment' album.id %}">
+    {% csrf_token %}
+    <label for="comment_message" class="add-comment">Add a Comment:</label>
+    <textarea name="comment_message" rows="4" cols="50" class="comment-textarea"></textarea>
+    <button type="submit" class="submit-comment-btn">Submit Comment</button>
+  </form>
+</body>
+{% endblock content %}

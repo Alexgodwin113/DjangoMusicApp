@@ -1,0 +1,41 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Album List</title>
+{% endblock title %}
+
+{% block content %}
+   
+    <h1 class="album-heading">Album List</h1>
+    <p class = "create-button">
+    <input type="button" onclick="location.href='{% url 'album-create' %}';" value="Create a New Album" /> 
+    </p>
+
+    {% if album_list %}
+        <div class="album-container">
+            {% for album in album_list %}
+                <div class="album-box">
+                    <img src="{{ album.cover.url }}"  Cover">
+                    <h3>{{ album.title }}</h3>
+                    <p><strong>Description:</strong> {{ album.description }}</p>
+                    <p><strong>Artist:</strong> {{ album.artist }}</p>
+                    <p><strong>Price:</strong> £{{ album.price }}</p>
+                    <p><strong>Format:</strong> {{ album.get_format_display }}</p>
+                    <p><strong>Release Date:</strong> {{ album.release_date }}</p>
+                    <p>Comments Count: {{ album.comments_count }}</p>
+                    {% if album.cover_art %}
+                        <img src="{{ album.cover_art.url }}"> 
+                    {% else %}
+                        <img src="{% static 'css/defaultcover.avif' %}">
+                    {% endif %}
+                    <a href="{% url 'album-detail' album.id %}">View Details</a>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No albums available.</p>
+    {% endif %}
+{% endblock content %}

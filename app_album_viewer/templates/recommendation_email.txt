@@ -1,0 +1,17 @@
+Subject: Recommendation: Check out this album!
+
+Dear Friend,
+
+I recommend you to check out the following album:
+
+Title: {{ album.title }}
+Artist: {{ album.artist }}
+Description: {{ album.description }}
+Release Date: {{ album.release_date }}
+Format: {{ album.format }}
+Price: {{ album.price }}
+
+Message from the Recommender:
+{{ message }}
+
+

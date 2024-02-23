@@ -1,0 +1,409 @@
+/* main color : #ff7592 */
+body {
+  font-family: "Times New Roman", "Times", serif;
+  background-image: url(Bg.jpg);
+  background-size: cover;
+  margin: 10px;
+  padding: 10px; }
+
+h1 {
+  text-transform: uppercase; }
+
+.success {
+  background-color: #00FF00; }
+
+.error, .errorlist {
+  background-color: #FF0000; }
+
+.formfield {
+  display: block; }
+
+.menu {
+  font-weight: bold;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 100px;
+  padding-right: 60px;
+  width: 100%;
+  overflow: hidden; }
+  .menu li {
+    float: right; }
+  .menu a {
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    padding: 14px 16px;
+    margin: 0px 5px;
+    text-decoration: none;
+    color: #444;
+    display: inline-block;
+    position: relative; }
+  .menu a::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 4px);
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 8px;
+    left: 0;
+    background-color: #75ffe2;
+    border-radius: 15px;
+    transform-origin: bottom right;
+    transition: transform 0.50s ease-out; }
+  .menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom; }
+
+.task_prompt {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 400px;
+  height: 50px;
+  text-align: left;
+  font: 400 .9em 'Arial';
+  border: 1px solid #97C6E3;
+  border-radius: 10px; }
+
+.complete {
+  background-color: #57ac90; }
+
+.incomplete {
+  background-color: #df8f8f; }
+
+.song_button {
+  float: right;
+  height: 24px;
+  width: 24px; }
+
+/*---------------- Login page -------------*/
+.login-form {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  float: left;
+  max-width: 400px;
+  /* Set a max-width if needed */
+  margin: 0 auto;
+  /* Center the form horizontally */
+  margin-left: 100px;
+  margin-top: 80px; }
+  .login-form h2 {
+    color: #333;
+    /* Customize heading color */ }
+  .login-form form {
+    margin-top: 20px;
+    /* Add some top margin for the form */
+    /* Style form elements */ }
+    .login-form form input, .login-form form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box; }
+    .login-form form button {
+      background-color: #ff7592;
+      /* Customize button background color */
+      color: #fff;
+      /* Customize button text color */
+      cursor: pointer; }
+
+/*-------------Sign Up Form -------------*/
+/* Add styles for the signup form */
+.signup-form {
+  float: left;
+  margin-left: 100px;
+  margin-top: 40px;
+  max-width: 400px;
+  /* Set a max-width if needed */ }
+  .signup-form h2 {
+    color: #333;
+    /* Customize heading color */ }
+  .signup-form form {
+    margin-top: 20px;
+    /* Add some top margin for the form */
+    /* Style form elements */ }
+    .signup-form form input, .signup-form form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box; }
+    .signup-form form button {
+      background-color: #3498db;
+      /* Customize button background color */
+      color: #fff;
+      /* Customize button text color */
+      cursor: pointer; }
+
+/*--------------------Albums-----------*/
+/* Add styles for the albums view page */
+.album-heading {
+  margin-top: 140px;
+  margin-left: 110px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold; }
+
+.create-button {
+  margin-top: 25px;
+  margin-left: 110px; }
+
+.album-container {
+  margin: 30px 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 20px;
+  justify-content: space-between; }
+  .album-container .album-box {
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+    /* Add smooth transition for background color */
+    /* Additional styling on hover */ }
+    .album-container .album-box img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px; }
+    .album-container .album-box h3 {
+      margin-bottom: 10px;
+      color: #333;
+      /* Customize heading color */ }
+    .album-container .album-box p {
+      margin-bottom: 5px;
+      color: #666;
+      /* Customize paragraph text color */ }
+    .album-container .album-box a {
+      color: #3498db;
+      text-decoration: none;
+      display: block;
+      margin-top: 10px; }
+      .album-container .album-box a:hover {
+        text-decoration: underline;
+        /* Underline on hover */ }
+    .album-container .album-box:hover {
+      background-color: #e9e9e9;
+      /* Change background color on hover */ }
+
+/* Add styles for the albums create page */
+.create-album-form {
+  padding-left: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+  .create-album-form form {
+    margin-top: 0px;
+    /* Adjust the top margin as needed */ }
+    .create-album-form form .formfield {
+      margin-bottom: -2px;
+      /* Adjust the bottom margin between form fields */ }
+
+/*------------- Add styles for the albums view page ----------*/
+.album-title {
+  color: #333; }
+
+.divider {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 15px; }
+
+.album-description {
+  color: #666; }
+
+.edit-btn,
+.delete-btn,
+.view-songs-btn,
+.add-songs-btn,
+.view-comments-btn,
+.submit-comment-btn,
+.recommend-btn {
+  padding: 8px 6px;
+  margin-right: 10px;
+  background-color: #ff7592;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  text-decoration: none;
+  /* Remove underline for anchor tags */
+  display: inline-block;
+  /* Ensures the buttons appear in a line */ }
+
+.edit-btn:hover,
+.delete-btn:hover,
+.view-songs-btn:hover,
+.add-songs-btn:hover,
+.view-comments-btn:hover,
+.submit-comment-btn:hover,
+.recommend-btn:hover {
+  background-color: rgba(255, 117, 146, 0.8); }
+
+.add-comment {
+  margin-top: 10px;
+  display: block; }
+
+.comment-textarea {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; }
+
+.submit-comment-btn {
+  display: block; }
+
+/*------------------- View Songs ---------------------*/
+/* styles.scss */
+.songs-list-view {
+  /* Add styling for the entire songs list view here */
+  padding: 20px; }
+
+.songs-heading {
+  margin-bottom: 10px;
+  /* Add styling for the heading here */
+  font-size: 25px;
+  color: #333; }
+
+.song-container {
+  /* Add styling for each song container here */
+  width: 30%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 0.5px solid #ccc; }
+  .song-container .song-title {
+    /* Add styling for the song title here */
+    font-weight: bold; }
+  .song-container .remove-song-button {
+    /* Add styling for the remove song button here */
+    background-color: #ff7592;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer; }
+
+/*---------------- Edit Album View --------*/
+/* base.scss */
+.user-form {
+  /* Body styling for the entire page with class user-form */
+  margin-left: 100px; }
+
+/* Add more styles as needed */
+/*---------------- Comments View --------*/
+.comments-heading {
+  /* Styling for the comments heading */
+  margin-top: 90px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin-left: 30px;
+  color: #333; }
+
+.comments-list {
+  /* Styling for the comments list */
+  margin-top: 40px;
+  margin-left: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  list-style-type: none;
+  padding: 0; }
+
+.comment-item {
+  /* Styling for each comment item */
+  margin-bottom: 10px; }
+
+.no-comments {
+  /* Styling for the no comments message */
+  color: #888; }
+
+/*-------------- recommend a friend ----------- */
+/* base.scss */
+.recom-title {
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+
+.recommendation-form {
+  /* Form container styling */
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+  .recommendation-form label {
+    /* Label styling */
+    display: block;
+    margin-bottom: 5px; }
+  .recommendation-form input, .recommendation-form textarea {
+    /* Input and textarea styling */
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box; }
+  .recommendation-form .send-recommendation-button {
+    /* Button styling */
+    background-color: #ff7592;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; }
+
+/* Add more styles as needed */
+
+/*# sourceMappingURL=base.css.map */
+/* ---------------account management ------------*/
+/* account_management.scss */
+
+.account-management {
+  width: 40%;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    
+}
+
+.welcome-message {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.comments-heading {
+  font-size: 18px;
+  color: #555;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.comment-item {
+  margin-bottom: 5px;
+}
+
+.no-comments {
+  color: #777;
+}
+
+.logout-form {
+  margin-top: 20px;
+}
+
+.logout-button {
+  background-color: #ff7592;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #ff7592;
+}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="comments-heading">Comments for {{ album.title }}</h2>
+
+    {% if comments %}
+        <ul class="comments-list">
+            {% for comment in comments %}
+                <li class="comment-item">{{ comment.user.username }}: {{ comment.message }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="no-comments">No comments yet.</p>
+    {% endif %}
+{% endblock content %}
